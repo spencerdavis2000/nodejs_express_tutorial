@@ -1,0 +1,35 @@
+
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<div class="page-header">
+<h3>Welcome to my Dev Test Page</h3>
+</div>
+
+<form action="/search" method="post">
+	<div class="spencer">
+		<label for="searchStudent">Search Students</label><br/>
+		<input type="text" name="nameSpencer" id="idSpencer" size="50"/>
+	</div>
+	<br />
+	<input type="submit" class="btn btn-info" value="Submit Button">
+
+</form>
+
+
+
+	<div id="student">
+
+		<h3> Name: {{first}}  {{last}} </h3><br />
+		<h4> Email: {{email}} </h4> <br />
+		<h4> Average GPA: {{gpa}} </h4> <br />
+
+		{{#each classList}}
+				{{@key}}       Grade: {{this}} <br /><br />
+		{{/each}}
+
+	</div>
+
+
+
+
+
+
