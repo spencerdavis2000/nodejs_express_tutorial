@@ -3,11 +3,14 @@
   "private": true,
   "version": "1.0.0",
   "description": "Express Tutorial",
-  "main": "expresstut.js",
+  "main": "index.js",
+  "engines": {
+    "node": "7.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Spencer Davis",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
