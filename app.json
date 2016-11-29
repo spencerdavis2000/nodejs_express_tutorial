@@ -1,0 +1,8 @@
+{
+  "name": "Spencer's Dev Test on Heroku using Node.js Express App",
+  "description": "A barebones Node.js app using Express as well as Handlebars",
+  "repository": "https://github.com/spencerdavis2000/nodejs_express_tutorial",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "static"],
+  "image": "heroku/nodejs"
+}
