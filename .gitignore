@@ -1,6 +1,12 @@
-#ignore packages installed by npm
+# Node build artifacts
 node_modules
-*~
-.DS_Store
-credentials.js
+npm-debug.log
 
+# Local development
+*.env
+*.dev
+.DS_Store
+
+# Docker
+Dockerfile
+docker-compose.yml
