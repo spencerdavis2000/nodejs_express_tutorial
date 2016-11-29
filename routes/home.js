@@ -21,6 +21,7 @@ router.get('/', function(req, res, next){
 // search students 
 
 router.post('/search', function(req, res, next){
+	var status = false;
 	var searchTerm = req.body.nameSpencer;
 
 	console.log("you are searching for: " + searchTerm);
@@ -47,6 +48,7 @@ router.post('/search', function(req, res, next){
 	for (var i = 0; i < jsonLength; i++){
 
 		if (searchTerm == student.students[i].first){
+			status = true;
 			console.log("json: " + student.students[i].first);
 			console.log("searchTerm: " + searchTerm);
 			console.log("index at : " + i);
@@ -83,6 +85,7 @@ router.post('/search', function(req, res, next){
 
 
 	gpa /= jsonClassLength;
+	gpa = parseFloat(gpa).toFixed(2);
 	console.log(classList);
 
 	res.render('home', 
@@ -93,7 +96,8 @@ router.post('/search', function(req, res, next){
 			email: email,
 			classList: classList,
 			index: index,
-			gpa: gpa
+			gpa: gpa,
+			status: status
 		});
 });
 

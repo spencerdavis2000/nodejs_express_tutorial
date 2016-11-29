@@ -18,13 +18,24 @@
 
 	<div id="student">
 
-		<h3> Name: {{first}}  {{last}} </h3><br />
-		<h4> Email: {{email}} </h4> <br />
-		<h4> Average GPA: {{gpa}} </h4> <br />
 
-		{{#each classList}}
-				{{@key}}       Grade: {{this}} <br /><br />
-		{{/each}}
+		{{#if status}}
+			<h3> Name: {{first}}  {{last}} </h3><br />
+			<h4> Email: {{email}} </h4> <br />
+			<h4> Average GPA: {{gpa}} </h4> <br />
+
+			{{#each classList}}
+					<ul>
+						<li>
+							{{@key}}     
+							<li>Grade: {{this}}</li>
+						</li>
+					</ul>
+				
+			{{/each}}
+		{{else}}
+			<h4> Enter students first name </h4>
+		{{/if}}
 
 	</div>
 

@@ -15,7 +15,6 @@ app.disable('x-powered-by');
 app.locals.myMessage = "hello my name is spencer";
 app.locals.sd = require('./students_classes.json');
 
-app.locals.list = ['spencer', 'sangeeta', 'anu'];
 
 // use router pages
 app.use('/', home);
